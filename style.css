@@ -1,0 +1,303 @@
+/* ==========================
+   RESET
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* ==========================
+   BODY
+========================== */
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    padding: 20px;
+
+}
+
+
+/* ==========================
+   CALCULATOR BOX
+========================== */
+
+.calculator {
+
+    width: 100%;
+
+    max-width: 400px;
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.25);
+
+}
+
+
+/* ==========================
+   DISPLAY
+========================== */
+
+.display {
+
+    min-height: 120px;
+
+    background: rgba(0,0,0,0.25);
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    text-align: right;
+
+    overflow-wrap: break-word;
+
+}
+
+
+#previousOperand {
+
+    font-size: 18px;
+
+    opacity: 0.7;
+
+    min-height: 25px;
+
+}
+
+
+#currentOperand {
+
+    font-size: 40px;
+
+    font-weight: 600;
+
+}
+
+
+
+/* ==========================
+   BUTTON GRID
+========================== */
+
+.buttons {
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 15px;
+
+}
+
+
+
+/* ==========================
+   BUTTON STYLE
+========================== */
+
+button {
+
+    height: 65px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    background: rgba(255,255,255,0.2);
+
+    color: white;
+
+    transition: all .25s ease;
+
+}
+
+
+
+button:hover {
+
+    transform: translateY(-4px);
+
+    background: rgba(255,255,255,0.35);
+
+}
+
+
+
+button:active {
+
+    transform: scale(0.95);
+
+}
+
+
+
+/* ==========================
+   SPECIAL BUTTONS
+========================== */
+
+
+.operator {
+
+    background: rgba(255,165,0,0.7);
+
+}
+
+
+.operator:hover {
+
+    background: rgba(255,165,0,0.9);
+
+}
+
+
+
+.equals {
+
+    background: #22c55e;
+
+}
+
+
+.equals:hover {
+
+    background: #16a34a;
+
+}
+
+
+
+.action {
+
+    background: rgba(239,68,68,0.8);
+
+}
+
+
+.action:hover {
+
+    background: rgba(220,38,38,1);
+
+}
+
+
+
+/* ==========================
+   DOUBLE WIDTH BUTTON
+========================== */
+
+.span-two {
+
+    grid-column: span 2;
+
+}
+
+
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+
+@media(max-width:450px){
+
+
+    .calculator {
+
+        padding:18px;
+
+    }
+
+
+    button {
+
+        height:55px;
+
+        font-size:20px;
+
+    }
+
+
+    #currentOperand {
+
+        font-size:32px;
+
+    }
+
+
+}
+
+
+/* ==========================
+   ANIMATION
+========================== */
+
+
+.calculator {
+
+    animation: appear .5s ease;
+
+}
+
+
+@keyframes appear {
+
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+
+}
